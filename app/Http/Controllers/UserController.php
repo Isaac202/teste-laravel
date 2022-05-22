@@ -45,6 +45,9 @@ class UserController extends Controller
             $user->email = $request->input(key:'email');
             $user->password = $request->input(key:'password');
             $user->save();
+            if ($user->save()){
+                echo "AL";
+            }
             return redirect('dashboard');
 
     }
